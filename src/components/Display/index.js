@@ -9,7 +9,7 @@ function Display() {
 
   return (
     <Container>
-      { result ? result.toLocaleString('pt-BR') : '|' }
+      { result ? result : '|' }
     </Container>
   );
 }

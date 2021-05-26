@@ -22,7 +22,7 @@ function CalculatorProvider({ children }) {
     try {
       setResult(eval(result).toString());
     } catch(err) {
-      setResult('Error');
+      setResult('');
     }
   }
 

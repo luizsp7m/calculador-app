@@ -26,7 +26,7 @@ export const Container = styled.div`
     color: ${props => props.theme.colors.primaryTextColor};
     transition: all .25s;
     font-size: 2rem;
-    box-shadow: 0px 5px 2px rgb(0 0 0 / 20%);
+    box-shadow: 0px 5px 5px rgb(0 0 0 / 20%);
     cursor: pointer;
   }
 

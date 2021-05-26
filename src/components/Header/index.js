@@ -19,26 +19,20 @@ function Header() {
             <span>3</span>
           </div>
 
-          <div className="checkbox-group">
-            <input
-              type="radio"
-              name="theme"
+          <div className="slider">
+            <div
+              className={theme === 'default' ? 'selected circle' : 'circle'}
               onClick={() => toggle('default')}
-              checked={theme === 'default'}
             />
 
-            <input
-              type="radio"
-              name="theme"
+            <div
+              className={theme === 'white' ? 'selected circle' : 'circle'}
               onClick={() => toggle('white')}
-              checked={theme === 'white'}
             />
 
-            <input
-              type="radio"
-              name="theme"
+            <div
+              className={theme === 'purple' ? 'selected circle' : 'circle'}
               onClick={() => toggle('purple')}
-              checked={theme === 'purple'}
             />
           </div>
         </div>

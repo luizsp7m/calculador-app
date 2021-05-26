@@ -28,33 +28,39 @@ export const Container = styled.div`
     }
 
     > div.switch {
+      display: flex;
+      flex-direction: column;
+      gap: .25rem;
+
       > div.numbers {
+        color: ${props => props.theme.name === 'default' ? '#fafafa' : props.theme.colors.primaryTextColor};
         display: flex;
-        justify-content: center;
-        padding: .25rem;
+        justify-content: center; 
 
         > span {
-          color: ${props => props.theme.name === 'default' ? '#fafafa' : props.theme.colors.primaryTextColor};
-          transition: color .25s;
-          margin: 0 .65rem;
-          font-size: 1rem;
+          margin: 0 .5rem;
         }
       }
 
-      > div.checkbox-group {
-        background: ${props => props.theme.colors.keypad};
-        transition: background .25s;
-        border-radius: 5rem;
+      > div.slider {
         display: flex;
-        justify-content: center;
+        background: rgba(0, 0, 0, .1);
+        justify-content: space-between;
         padding: .5rem;
+        border-radius: 1rem;
 
-        > input[type='radio'] {
-          margin: 0 .25rem;
-          height: 1.75rem;
-          width: 1.75rem;
-          border: none;
+        > div.circle {
+          height: 1.3rem;
+          width: 1.3rem;
+          border-radius: 50%;
+          background: none;
+          margin: 0 .2rem;
           cursor: pointer;
+          border: 1px solid ${props => props.theme.name === 'white' ? 'rgba(0, 0, 0, .1)' : 'rgba(255, 255, 255, .05)'};
+        }
+
+        > div.selected {
+          background: ${props => props.theme.colors.secondaryKey}
         }
       }
     }
